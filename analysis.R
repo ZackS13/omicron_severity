@@ -55,7 +55,7 @@ outglm <- function(outcome,#outcome of interest
 ){
 
 dat.aoi$label <- as.factor(dat.aoi[,which(colnames(dat.aoi)==outcome)])
-dat.aoi <- dat.aoi[,c(1:5,10,12:13)]
+dat.aoi <- dat.aoi[,c(1:5,7:9)]
 dat.aoi$label <- ifelse(dat.aoi$label == "N",0,1)#as.numeric(dat.aoi$label)
 W.out <- weightit(Onset_ym ~ vaccine_status+hispanic+race+age+female+charlson_score,
                     data = dat.aoi, estimand = "ATT",focal ="0000" , method = "ebal")
