@@ -17,7 +17,7 @@
 #Store this table in a dataframe called glm.dat
 library(survey)
 library(weightit)
-library(data.frame)
+library(data.table)
 library(dplyr)
 library(lubridate)
 library(tidyr)
